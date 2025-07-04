@@ -15,23 +15,23 @@ Proyek ini merupakan aplikasi web manajemen Toko ATK berbasis **Java Web (JSP & 
 
 ## 🚀 Fitur Utama
 
-- 🔐 Login & Logout user
-- 👤 Manajemen User
-- 📦 CRUD Barang
-- 📊 CRUD Penjualan (Sales)
-- 🏷️ CRUD Stok
-- 📈 Statistik Penjualan via Chart
-- 💅 Styling dengan CSS dan JavaScript
+- 🔐 Login & Logout user  
+- 👤 Manajemen User  
+- 📦 CRUD Barang  
+- 📊 CRUD Penjualan (Sales)  
+- 🏷️ CRUD Stok  
+- 📈 Statistik Penjualan via Chart  
+- 💅 Styling dengan CSS dan JavaScript  
 
 ---
 
 ## 🛠 Teknologi
 
-- Java Server Pages (JSP)
-- Jakarta Servlet
-- MVC Pattern
-- HTML, CSS, JavaScript
-- Servlet API & Gson
+- Java Server Pages (JSP)  
+- Jakarta Servlet  
+- MVC Pattern  
+- HTML, CSS, JavaScript  
+- Servlet API & Gson  
 
 ---
 
@@ -74,8 +74,8 @@ tokoatk/
 
 ## ⚙️ Cara Menjalankan
 
-1. Buka project di **NetBeans**
-2. Pastikan **Tomcat / GlassFish** sudah terpasang
+1. Buka project di **NetBeans**  
+2. Pastikan **Tomcat** atau **GlassFish** sudah terpasang  
 3. Jalankan project dan buka:
 ```
 http://localhost:8080/TokoAtkWeb/
@@ -83,11 +83,33 @@ http://localhost:8080/TokoAtkWeb/
 
 ---
 
+## 💾 Instalasi & Penggunaan Database
+
+1. Buka **phpMyAdmin** atau MySQL Workbench  
+2. Buat database baru dengan nama:
+   ```
+   tokoatk
+   ```
+3. Import file `tokoatk.sql` yang ada di dalam folder project:
+   - **Via phpMyAdmin**: pilih database → klik **Import** → pilih file `tokoatk.sql`
+   - **Via terminal / command prompt**:
+     ```bash
+     mysql -u [username] -p tokoatk < path/to/tokoatk.sql
+     ```
+4. Sesuaikan konfigurasi koneksi database di file `DbConnection.java`:
+   ```java
+   String url = "jdbc:mysql://localhost:3306/tokoatk";
+   String username = "root";
+   String password = ""; // atau sesuaikan dengan password lokal MySQL kamu
+   ```
+
+---
+
 ## 📌 Catatan
 
-- Proyek ini memiliki struktur rapi dan mengikuti pola MVC
-- Semua proses login dan manajemen data di-handle melalui Servlet + JSP
-- Tersedia folder `api/` untuk endpoint JSP tambahan seperti statistik & AJAX
+- Proyek ini memiliki struktur rapi dan mengikuti pola MVC  
+- Semua proses login dan manajemen data di-handle melalui Servlet + JSP  
+- Tersedia folder `api/` untuk endpoint JSP tambahan seperti statistik & AJAX  
 
 ---
 
